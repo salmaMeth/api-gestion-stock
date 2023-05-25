@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestionminiprojet?createDatabaseIfNotExist=true&userSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  ## Specify DBMS
+  jpa:
+    database: MYSQL
+    show-sql: false
+    properties:
+      hibernate:
+        session_factory:
+          interceptor: com.projet.stock.interceptor.Interceptor
+    # Hibernate DDL Auto (create, create-drop, update)
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5Dialect
+
+server:
+  port: 8081
+
+
+flickr:
+  apiKey: b81699de001eedd6a0077f52dd38b677
+  apiSecret: 50a563eb4762f5f5
+  
+  appKey: 72157720880705510-7481b209f0e32f22
+  appSecret: a99153e064b480ce
+
+
